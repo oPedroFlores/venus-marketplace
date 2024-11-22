@@ -23,10 +23,11 @@ const Categories = () => {
 
         {/* Mapear as categorias */}
         <div className={styles.categoriesCardsWrapper}>
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <CategoryCard
               key={`categoryCard-${category.name}`}
               category={category}
+              index={index}
             />
           ))}
         </div>

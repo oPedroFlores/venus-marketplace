@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       {/* Logo */}
       <Link href="/" className={styles.logoDiv}>
-        <Image src="/logo/v2.png" alt="logo" width={100} height={100} />
+        <Image src="/logo/venus.png" alt="logo" width={80} height={80} />
         <div>
           <h2>Venus</h2>
           <p>Marketplace</p>

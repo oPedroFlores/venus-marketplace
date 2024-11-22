@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Art",
+    "collection": "themonalana",
+    "desc": "Explore stunning digital artworks by talented creators."
+  },
+  {
+    "name": "Music",
+    "collection": "producersnft",
+    "desc": "Own unique beats and tracks from top music producers."
+  },
+  {
+    "name": "PFP's",
+    "collection": "mutant-ape",
+    "desc": "Showcase exclusive profile picture collectibles."
+  },
+  {
+    "name": "Games",
+    "collection": "otherside-koda",
+    "desc": "Unlock rare gaming assets and interactive experiences."
+  },
+  {
+    "name": "Photography",
+    "collection": "amazonia",
+    "desc": "Collect breathtaking shots from world-class photographers."
+  }
+]

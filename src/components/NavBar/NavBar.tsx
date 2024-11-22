@@ -1,8 +1,31 @@
+'use client';
 import React from 'react';
 import styles from '@/components/NavBar/NavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 const NavBar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const menuRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !event.target.closest(`.${styles.hamburger}`)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
@@ -13,25 +36,54 @@ const NavBar = () => {
           <p>Marketplace</p>
         </div>
       </Link>
-      {/* Links */}
-      <div className={styles.links}>
-        <Link href="#" className={styles.activeLink}>
-          Home
-        </Link>
-        <Link href="#">About</Link>
-        <Link href="#">Contact</Link>
-        <Link href="#">Help</Link>
+
+      {/* Botão menu hamburger */}
+
+      <div
+        className={`${styles.hamburger} ${
+          isMobileMenuOpen ? styles.closeHamburger : ''
+        }`}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {/* Ícone do hambúrguer */}
+        <div className={styles.barTop}></div>
+        <div className={styles.barMiddle}></div>
+        <div className={styles.barBottom}></div>
       </div>
 
-      {/* Actions */}
+      {/* Links */}
+      <div
+        className={`${styles.links} ${
+          isMobileMenuOpen ? styles.mobileMenu : ''
+        }`}
+        ref={menuRef}
+      >
+        <ul>
+          <li>
+            <Link href="#" className={styles.activeLink}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="#">About</Link>
+          </li>
+          <li>
+            <Link href="#">Contact</Link>
+          </li>
+          <li>
+            <Link href="#">Help</Link>
+          </li>
+        </ul>
 
-      <div className={styles.actions}>
-        <button className={styles.connect}>
-          <span>Connect Wallet</span>
-        </button>
-        <Link href="/user" className={styles.user}>
-          <Image src="/user/user.png" alt="user" width={50} height={50} />
-        </Link>
+        {/* Actions */}
+        <div className={styles.actions}>
+          <button className={styles.connect}>
+            <span>Connect Wallet</span>
+          </button>
+          <Link href="/user" className={styles.user}>
+            <Image src="/user/user.png" alt="user" width={50} height={50} />
+          </Link>
+        </div>
       </div>
     </nav>
   );

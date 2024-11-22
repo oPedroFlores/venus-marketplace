@@ -151,3 +151,33 @@
   border-radius: 50%;
   filter: blur(200px);
 }
+
+/* Responsivo */
+
+@media screen and (max-width: 1024px) {
+  .rightSide img {
+    width: 400px;
+  }
+  .leftSide > h2 {
+    font-size: 2rem;
+  }
+  .leftSide > p {
+    font-size: 1rem;
+  }
+  .leftSide > div > button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .appresentation {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .rightSide img {
+    width: 300px;
+  }
+}

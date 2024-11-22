@@ -9,11 +9,12 @@ const NavBar = () => {
 
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
       if (
         isMobileMenuOpen &&
         menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !event.target.closest(`.${styles.hamburger}`)
+        !menuRef.current.contains(target) &&
+        !target?.closest(`.${styles.hamburger}`)
       ) {
         setIsMobileMenuOpen(false);
       }

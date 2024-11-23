@@ -175,4 +175,22 @@
     flex-direction: column;
     gap: 0;
   }
+  .appresentation {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .leftSide > h2 {
+    font-size: 2rem;
+  }
+  .leftSide > p {
+    font-size: 0.875rem;
+  }
+  .leftSide > div {
+    flex-direction: row;
+  }
+  .leftSide > div > button {
+    font-size: 1rem;
+  }
 }

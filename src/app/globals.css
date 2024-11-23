@@ -28,6 +28,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--mainBg);
   color: white;
+  overflow-x: hidden;
 }
 
 /* Animations */

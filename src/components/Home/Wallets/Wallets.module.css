@@ -1,0 +1,160 @@
+.walletsSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--defaultPadding);
+  position: relative;
+}
+
+.walletsSection > h2 {
+  margin: 4rem 0;
+  font-size: 3rem;
+}
+
+/* Cards Wrapper */
+
+.walletsContainer {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.walletCard {
+  --card-width: 255px;
+  --card-height: 314px;
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: calc(var(--card-width) * 0.07);
+  z-index: 50;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: calc(var(--card-width) * 0.05) calc(var(--card-width) * 0.05)
+    calc(var(--card-width) * 0.2) 0px rgba(0, 0, 0, 0.75);
+}
+
+.cardBG {
+  position: absolute;
+  top: calc(var(--card-height) * 0.025);
+  left: calc(var(--card-width) * 0.025);
+  width: calc(var(--card-width) * 0.95);
+  height: calc(var(--card-height) * 0.96);
+  z-index: 2;
+  background: var(--mainSecondBg);
+  backdrop-filter: blur(calc(var(--card-width) * 0.12));
+  border-radius: calc(var(--card-width) * 0.05);
+  overflow: hidden;
+  outline: calc(var(--card-width) * 0.01) solid rgba(255, 255, 255, 0.5);
+}
+
+.cardBlob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--card-width) * 0.75);
+  height: calc(var(--card-width) * 0.75);
+  border-radius: 50%;
+  background-color: var(--mainPink);
+  opacity: 1;
+  filter: blur(calc(var(--card-width) * 0.06));
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+/* cardImageWrapper */
+
+.cardImageWrapper {
+  margin-top: 10%;
+  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  flex: 1;
+}
+
+.cardImageWrapper > div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(59, 47, 71, 0.5);
+}
+
+.cardImageWrapper > img {
+  width: 80px;
+  z-index: 2;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  -webkit-box-shadow: 7px 10px 40px 15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 10px 40px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 10px 40px 15px rgba(0, 0, 0, 0.75);
+}
+/* walletCard h2 */
+
+.walletCard > h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  z-index: 5;
+  justify-self: flex-end;
+}
+
+/* Separator */
+
+.gradiantSeparator {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(33, 25, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(33, 25, 41, 1) 0%,
+    rgba(20, 12, 31, 1) 80%
+  );
+}
+
+/* Bubbles  */
+
+.lightPinkBubble {
+  z-index: 0;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: var(--darkPink);
+  opacity: 0.75;
+  border-radius: 50%;
+  filter: blur(100px);
+}

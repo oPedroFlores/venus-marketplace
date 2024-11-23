@@ -19,7 +19,6 @@ const Appresentation: React.FC = () => {
 
   return (
     <section className={styles.appresentation}>
-      <div className={styles.glowDivider}></div>
       {/* Left Side */}
       <div className={styles.leftSide}>
         <motion.h2

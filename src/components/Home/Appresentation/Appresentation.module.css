@@ -175,9 +175,6 @@
     flex-direction: column;
     gap: 0;
   }
-  .appresentation {
-    margin-top: 0;
-  }
 }
 
 @media screen and (max-width: 450px) {

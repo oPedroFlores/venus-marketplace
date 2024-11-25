@@ -10,18 +10,20 @@
 .walletsSection > h2 {
   margin: 4rem 0;
   font-size: 3rem;
+  text-align: center;
 }
 
 /* Cards Wrapper */
 
 .walletsContainer {
-  max-width: 80%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .walletCard {
+  margin: 0 auto;
   --card-width: 255px;
   --card-height: 314px;
   position: relative;
@@ -157,4 +159,23 @@
   opacity: 0.75;
   border-radius: 50%;
   filter: blur(100px);
+}
+
+@media screen and (max-width: 1024px) {
+  .walletsContainer {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .walletCard {
+    --card-width: 205px;
+    --card-height: 250px;
+  }
+  .walletsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    grid-template-rows: auto;
+  }
 }

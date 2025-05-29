@@ -1,8 +1,11 @@
 import NavBar from '@/components/NavBar/NavBar';
 import styles from './page.module.css';
 import Appresentation from '@/components/Home/Appresentation/Appresentation';
-import Categories from '@/components/Home/Categories/Categories';
 import Wallets from '@/components/Home/Wallets/Wallets';
+import ExploreSection from '@/components/Home/ExploreSection';
+import CollectionsSection from '@/components/Home/Collections/CollectionsSection';
+import CreateSection from '@/components/Home/CreateSection';
+import LearnSection from '@/components/Home/LearnSection';
 
 export default function Home() {
   return (
@@ -12,11 +15,14 @@ export default function Home() {
         <Appresentation />
         {/* Shape divider */}
 
-        {/* Categories */}
-        <Categories />
-
         {/* Supported Wallets */}
         <Wallets />
+
+        {/* Newly Added Sections */}
+        <ExploreSection />
+        <CollectionsSection />
+        <CreateSection />
+        <LearnSection />
       </section>
     </div>
   );

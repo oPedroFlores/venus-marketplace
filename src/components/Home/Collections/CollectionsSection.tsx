@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Categories.module.css';
+import styles from './CollectionsSection.module.css';
 import Divisor from './Divisor';
 import CategoriesJson from '@/app/json/categories.json';
 import CategoryCard from './CategoryCard';
@@ -10,16 +10,16 @@ export interface Category {
   desc: string;
 }
 
-const Categories = () => {
+const CollectionsSection = () => {
   const categories: Category[] = CategoriesJson as Category[];
   return (
-    <div className={styles.categoriesSection}>
+    <section id="collections" className={styles.categoriesSection}>
       <Divisor />
 
       <div className={styles.categories}>
         <div className={styles.lightPinkBubble}></div>
-        <span>Explore the greatest NFTs collections</span>
-        <h2>Top NFT Categories</h2>
+        <span>Explore our curated NFT collections</span>
+        <h2>Featured Collections</h2>
 
         {/* Mapear as categorias */}
         <div className={styles.categoriesCardsWrapper}>
@@ -36,4 +36,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CollectionsSection;

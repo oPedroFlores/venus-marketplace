@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Category } from '@/components/Home/Categories/Categories';
-import styles from '@/components/Home/Categories/Categories.module.css';
+import { Category } from '@/components/Home/Collections/CollectionsSection';
+import styles from '@/components/Home/Collections/CollectionsSection.module.css';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 

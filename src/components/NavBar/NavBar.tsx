@@ -61,18 +61,21 @@ const NavBar = () => {
       >
         <ul>
           <li>
-            <Link href="#" className={styles.activeLink}>
+            <Link href="/" className={styles.activeLink}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="#">About</Link>
+            <Link href="#explore">Explore</Link>
           </li>
           <li>
-            <Link href="#">Contact</Link>
+            <Link href="#collections">Collections</Link>
           </li>
           <li>
-            <Link href="#">Help</Link>
+            <Link href="#create">Create</Link>
+          </li>
+          <li>
+            <Link href="#learn">Learn</Link>
           </li>
         </ul>
 

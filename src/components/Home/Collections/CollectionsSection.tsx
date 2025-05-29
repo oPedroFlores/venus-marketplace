@@ -32,7 +32,7 @@ const CollectionsSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

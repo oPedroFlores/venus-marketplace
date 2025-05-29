@@ -6,6 +6,8 @@ import ExploreSection from '@/components/Home/ExploreSection';
 import CollectionsSection from '@/components/Home/Collections/CollectionsSection';
 import CreateSection from '@/components/Home/CreateSection';
 import LearnSection from '@/components/Home/LearnSection';
+import HowItWorksSection from '@/components/Home/HowItWorksSection';
+import FeaturedArtistsSection from '@/components/Home/FeaturedArtistsSection';
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
         <CollectionsSection />
         <CreateSection />
         <LearnSection />
+        <HowItWorksSection />
+        <FeaturedArtistsSection />
       </section>
     </div>
   );

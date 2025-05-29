@@ -1,0 +1,56 @@
+.featuredArtistsSection {
+  /* background-color: var(--anotherShade); Optional: different bg */
+}
+
+.artistsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.artistCard {
+  background-color: var(--mainSecondBg); /* Or card background */
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artistCard:hover {
+  transform: translateY(-5px);
+}
+
+.artistAvatar {
+  margin-bottom: 15px;
+}
+
+.artistAvatar img { /* Next/Image style prop handles border-radius but this is a fallback */
+    border-radius: 50%;
+}
+
+.artistName {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  color: var(--primaryHeading);
+}
+
+.artistDescription {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--primaryText);
+  margin-bottom: 15px;
+  min-height: 60px; /* To allow some space for description */
+}
+
+.sampleNftImage img { /* Next/Image style prop handles border-radius */
+    border-radius: 10px;
+    object-fit: cover;
+}

@@ -1,0 +1,150 @@
+.footer {
+  background-color: var(--mainSecondBg); /* Darker background for footer */
+  color: var(--secondaryText, #ccc); /* Lighter text for contrast */
+  padding: 40px var(--defaultPadding, 20px);
+  border-top: 1px solid var(--borderColor, #333);
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brandSection .logoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaryHeading, #fff);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.brandSection .logoLink span {
+    color: var(--primaryHeading, #fff); /* Ensure span inherits color */
+}
+
+
+.missionStatement {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  grid-column: span 2; /* Allow links to take more space if possible */
+}
+
+@media (min-width: 768px) {
+    .linksGrid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}
+
+
+.linkColumn h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--primaryHeading, #fff);
+}
+
+.linkColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkColumn ul li {
+  margin-bottom: 8px;
+}
+
+.linkColumn ul li a {
+  color: var(--secondaryText, #ccc);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.linkColumn ul li a:hover {
+  color: var(--accentColor, #8e2de2); /* Venus accent color */
+}
+
+.socialsSection h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primaryHeading, #fff);
+}
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcon {
+  /* Basic styling for placeholder text icons */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--accentColor, #8e2de2);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.socialIcon:hover {
+    transform: scale(1.1);
+}
+
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--borderColorDarker, #444);
+  font-size: 0.9rem;
+}
+.copyright p {
+    margin-bottom: 10px;
+}
+.legalLinks a {
+    color: var(--secondaryText, #ccc);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.85rem;
+}
+.legalLinks a:hover {
+    color: var(--accentColor, #8e2de2);
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr; /* Stack sections on smaller screens */
+    text-align: center;
+  }
+  .brandSection .logoLink {
+    justify-content: center;
+  }
+  .missionStatement {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .linksGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* keep responsive */
+    text-align: left; /* Keep text left aligned in columns */
+  }
+  .socialsSection {
+      align-items: center;
+      display:flex;
+      flex-direction:column;
+  }
+}

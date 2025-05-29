@@ -1,0 +1,45 @@
+.howItWorksSection {
+  background-color: var(--mainBg); /* Or a slightly different shade */
+  /* Add any specific container styling here if HomeSections.module.css isn't enough */
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stepCard {
+  background-color: var(--mainSecondBg); /* Or card background */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+}
+
+.stepIcon {
+  font-size: 3rem; /* Adjust as needed */
+  margin-bottom: 15px;
+  /* In a real app, this would be an <Image> or SVG component */
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primaryHeading); /* Or your heading color */
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--primaryText); /* Or your text color */
+}

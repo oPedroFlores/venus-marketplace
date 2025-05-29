@@ -75,6 +75,9 @@ const NavBar = () => {
             <Link href="#create">Create</Link>
           </li>
           <li>
+            <Link href="#how-it-works">How it Works</Link>
+          </li>
+          <li>
             <Link href="#learn">Learn</Link>
           </li>
         </ul>
